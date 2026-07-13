@@ -2,43 +2,138 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="../img/icons/cat-isolated.svg">
     <link rel="stylesheet" href="../style/style.css">
     <title>MyHomelab - hexcat.at</title>
 </head>
 <body>
-<header>
-    <div class="header-left">
-        <a href="../index.html" id="logo">
-            <h1>Hexcat</h1>
-            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <polygon points="50,8 86,29 86,71 50,92 14,71 14,29"
-                         fill="none"
-                         stroke="#1D2530"
-                         stroke-width="4.5"
-                         stroke-linejoin="round" />
+    <header>
+        <div class="header-left">
+            <a href="../index.html" id="logo">
+                <h1>Hexcat</h1>
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="50,8 86,29 86,71 50,92 14,71 14,29"
+                             fill="none"
+                             stroke="#1D2530"
+                             stroke-width="4.5"
+                             stroke-linejoin="round" />
 
-                <path d="M 35,35
-                             L 50,46
-                             L 65,35
-                             L 65,58
-                             L 50,73
-                             L 35,58
-                             Z"
-                      fill="none"
-                      stroke="#1D2530"
-                      stroke-width="4.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round" />
-            </svg>
-        </a>
-        <a href="https://www.instagram.com/no_code42/" class="by-tag" target="_blank"><sub>by @No_code42</sub></a>
-    </div>
-    <nav>
-        <a href="#top">MyHomelab</a>
-        <a href="photos.html">MyPhotos</a>
-        <a href="about.html">AboutMe</a>
-    </nav>
-</header>
+                    <path d="M 35,35
+                                 L 50,46
+                                 L 65,35
+                                 L 65,58
+                                 L 50,73
+                                 L 35,58
+                                 Z"
+                          fill="none"
+                          stroke="#1D2530"
+                          stroke-width="4.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round" />
+                </svg>
+            </a>
+            <a href="https://www.instagram.com/no_code42/" class="by-tag" target="_blank"><sub>by @No_code42</sub></a>
+        </div>
+        <nav>
+            <a href="#top"class="nav-active">MyHomelab</a>
+            <a href="photos.html">MyPhotos</a>
+            <a href="about.html">AboutMe</a>
+        </nav>
+    </header>
+    <main id="homelab">
+        <div class="homelab-intro">
+            <h1>My Homelab</h1>
+            <p>A deep dive into my self-hosted infrastructure, hardware orchestration, and local network services.</p>
+        </div>
 
+        <section class="hardware-section">
+            <div class="hardware-visual">
+                <div class="rack-photo">
+                    <img src="../img/homelab/DSC03795.JPG" alt="10" server rack>
+                </div>
+            </div>
+            <div class="hardware-specs">
+                <h2>The 10" Mini-Rack</h2>
+                <p>Space-efficient, quiet, and powerful. My central network and compute hub.</p>
+
+                <div class="spec-item">
+                    <div>
+                        <h3>Lenovo ThinkCentre m720q</h3>
+                        <p>Runs ZimaOS and functions as the main node. Also holds all the storage drives.</p>
+                    </div>
+                </div>
+
+                <div class="spec-item">
+                    <div>
+                        <h3>FritzBox 7590 AX</h3>
+                        <p>Acts as the Firewall, Acces Point and core switch.</p>
+                    </div>
+                </div>
+
+                <div class="spec-item">
+                    <div>
+                        <h3>Raspberry Pi 5 8GB</h3>
+                        <p>Functions as the DNS-server and development server.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="software-section">
+            <h2>Self-Hosted Services</h2>
+            <p class="section-desc">Most applications run natively within a Docker environment for easy deployment.</p>
+
+            <div class="software-grid">
+                <div class="software-card">
+                    <div class="card-header">
+                        <h3>Immich</h3>
+                        <span class="badge media">Photos</span>
+                    </div>
+                    <p>Replaces Google Photos.</p>
+                </div>
+
+                <div class="software-card">
+                    <div class="card-header">
+                        <h3>Jellyfin</h3>
+                        <span class="badge media">Streaming</span>
+                    </div>
+                    <p>Replaces the standard streaming services.</p>
+                </div>
+
+                <div class="software-card">
+                    <div class="card-header">
+                        <h3>Nextcloud</h3>
+                        <span class="badge storage">Cloud</span>
+                    </div>
+                    <p>Replaces the Microsoft Cloud.</p>
+                </div>
+
+                <div class="software-card">
+                    <div class="card-header">
+                        <h3>Nginx Proxy Manager</h3>
+                        <span class="badge network">Network</span>
+                    </div>
+                    <p>Manages reverse proxies and local domain routing.</p>
+                </div>
+
+                <div class="software-card">
+                    <div class="card-header">
+                        <h3>Cloudflare Tunnels</h3>
+                        <span class="badge network">Security</span>
+                    </div>
+                    <p>Only eposes the service specific ports and brings the well-known Cloudflare security.</p>
+                </div>
+
+                <div class="software-card">
+                    <div class="card-header">
+                        <h3>Docker Architecture</h3>
+                        <span class="badge core">Core</span>
+                    </div>
+                    <p>The lightweight and high performance virtualization layer that allows easy hardware passthrough.</p>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
