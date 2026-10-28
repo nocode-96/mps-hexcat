@@ -1,24 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Noah Brückl-Mayr — Schüler, Webdesigner und Fotograf aus Österreich. Schlanke Webentwicklung, Vollformat-Fotografie und Homelab-Infrastruktur.">
+    <meta name="theme-color" content="#f8fafc">
+    <meta property="og:title" content="Noah Brückl-Mayr — Webdesign, Fotografie & Homelab | Hexcat">
+    <meta property="og:description" content="Schüler, Webdesigner und Fotograf aus Österreich. Schlanke Webentwicklung, Vollformat-Fotografie und Homelab-Infrastruktur.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="de_AT">
     <link rel="icon" type="image/svg+xml" href="img/icons/cat-isolated.svg">
     <link rel="stylesheet" href="style/style.css">
-    <title>Welcome - hexcat.at</title>
+    <title>Noah Brückl-Mayr — Webdesign, Fotografie & Homelab | Hexcat</title>
+    <script src="js/script.js" defer></script>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
     <header>
         <div class="header-left">
-            <a href="#top" id="logo">
+            <a href="./" id="logo" aria-label="Hexcat Startseite">
                 <h1>Hexcat</h1>
-                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                     <polygon points="50,8 86,29 86,71 50,92 14,71 14,29"
                              fill="none"
                              stroke="#1D2530"
                              stroke-width="4.5"
                              stroke-linejoin="round" />
-
                     <path d="M 35,35
                              L 50,46
                              L 65,35
@@ -33,35 +40,216 @@
                           stroke-linejoin="round" />
                 </svg>
             </a>
-            <a href="https://www.instagram.com/no_code42/" class="by-tag" target="_blank"><sub>by @No_code42</sub></a>
+            <a href="https://www.instagram.com/prism_noah/" class="by-tag" target="_blank" rel="noopener noreferrer"><sub>by @prism_noah</sub></a>
         </div>
-        <nav>
-            <a href="pages/homelab.html">MyHomelab</a>
-            <a href="pages/photos.html">MyPhotos</a>
-            <a href="pages/about.html">AboutMe</a>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Navigationsmenü umschalten">
+        <label for="menu-toggle" class="menu-icon" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <nav aria-label="Hauptnavigation">
+            <a href="pages/photos/">Fotografie</a>
+            <a href="pages/references/">Referenzen</a>
+            <a href="pages/homelab/">Homelab</a>
+            <a href="pages/about/">Über mich</a>
         </nav>
     </header>
-    <main id="hero">
-        <div id="hero-content">
-            <div class="hero-left">
-                <h1><b>Welcome...</b></b><br>to my web page!</h1>
-                <h2>I'm a tech-savvy student from Austria and I use this domain to host my services online. You can find the quick links here.</h2>
-                <div class="hero-arrow">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                        <polyline points="12 5 19 12 12 19"></polyline>
-                    </svg>
+
+    <main id="main-content" class="main-content" tabindex="-1">
+        <!-- HERO SECTION -->
+        <section id="hero" aria-labelledby="hero-title">
+            <div id="hero-content">
+                <div class="hero-left">
+                    <div class="hero-badge">
+                        <span class="status-dot" aria-hidden="true"></span>
+                        <span>Servus, ich bin Noah!</span>
+                    </div>
+                    <h1 id="hero-title">Visuals & Code.<br><span class="gradient-text">Mit Präzision & Leidenschaft.</span></h1>
+                    <h2>Ich bin Noah Brückl-Mayr — Schüler, Webdesigner und Fotograf aus Oberösterreich. Ich verbinde schlanken, performanten Code mit stimmungsvoller Vollformat-Fotografie und eigener Homelab-Infrastruktur.</h2>
+                    <div class="hero-actions">
+                        <a href="pages/photos/" class="btn btn-primary">Fotogalerie ansehen</a>
+                        <a href="pages/references/" class="btn btn-secondary">Projekte entdecken</a>
+                        <a href="pages/about/" class="btn btn-secondary">Über mich</a>
+                    </div>
+                    <div>
+                        <a href="#schwerpunkte" class="hero-arrow" aria-label="Zu den Schwerpunkten scrollen">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" focusable="false" aria-hidden="true">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <polyline points="19 12 12 19 5 12"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-right">
+                    <div class="profile-card-header">
+                        <div class="profile-avatar-svg" aria-hidden="true">
+                            <svg viewBox="0 0 100 100" fill="none" stroke="#ffffff" stroke-width="4.5" stroke-linejoin="round">
+                                <polygon points="50,8 86,29 86,71 50,92 14,71 14,29" />
+                                <path d="M 35,35 L 50,46 L 65,35 L 65,58 L 50,73 L 35,58 Z" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Noah Brückl-Mayr</h3>
+                            <p>Hexcat • Schüler & Creator</p>
+                        </div>
+                    </div>
+                    <ul class="service-links">
+                        <li>
+                            <a href="pages/photos/">
+                                <span class="link-title">Fotografie</span>
+                                <span class="link-arrow" aria-hidden="true">→</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="pages/references/">
+                                <span class="link-title">Webdesign & Projekte</span>
+                                <span class="link-arrow" aria-hidden="true">→</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="pages/homelab/">
+                                <span class="link-title">Homelab & Server</span>
+                                <span class="link-arrow" aria-hidden="true">→</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="pages/about/">
+                                <span class="link-title">Werdegang</span>
+                                <span class="link-arrow" aria-hidden="true">→</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="hero-contact-strip">
+                        <span>Instagram: <a href="https://www.instagram.com/prism_noah/" target="_blank" rel="noopener noreferrer">@prism_noah</a></span>
+                        <a href="mailto:noah.c.bruecklmayr@gmail.com">E-Mail schreiben →</a>
+                    </div>
                 </div>
             </div>
-            <div class="hero-right">
-                <h3>Hosted Services</h3>
-                <ul class="service-links">
-                    <li><a href="https://photos.hexcat.at" target="_blank" rel="noopener noreferrer">Immich</a></li>
-                    <li><a href="https://stream.hexcat.at" target="_blank" rel="noopener noreferrer">Jellyfin</a></li>
-                    <li><a href="https://nextcloud.hexcat.at" target="_blank" rel="noopener noreferrer">Nextcloud</a></li>
-                </ul>
+        </section>
+
+        <!-- FOKUSBEREICHE -->
+        <section id="schwerpunkte" class="home-section" aria-labelledby="schwerpunkte-title">
+            <div class="section-header">
+                <span class="section-tag">Fokus & Leidenschaften</span>
+                <h2 id="schwerpunkte-title">Drei Welten, eine Handschrift</h2>
+                <p>Ob hinter der Kamera, im Code-Editor oder bei der Rack-Konfiguration: Mich begeistert das perfekte Zusammenspiel aus Ästhetik, sauberer Technik und Verlässlichkeit.</p>
+            </div>
+            <div class="focus-grid">
+                <article class="focus-card">
+                    <div class="focus-card-body">
+                        <span class="focus-card-badge photo">Fotografie</span>
+                        <h3>Vollformat & Makro</h3>
+                        <p>Mit Auge für Lichtstimmung und Details halte ich Momente unverfälscht fest — von filigranen Blütenmakros bis hin zu Natur- und Architekturmotiven.</p>
+                    </div>
+                    <a href="pages/photos/" class="focus-card-link">Zur Fotogalerie (15 Aufnahmen) <span aria-hidden="true">→</span></a>
+                </article>
+
+                <article class="focus-card">
+                    <div class="focus-card-body">
+                        <span class="focus-card-badge web">Web & Code</span>
+                        <h3>Schlankes Webdesign</h3>
+                        <p>Keine überladenen Frameworks, sondern blitzschneller, semantischer Code, intuitive Nutzerführung und hohe Barrierefreiheit wie bei wood4home.at.</p>
+                    </div>
+                    <a href="pages/references/" class="focus-card-link">Alle Referenzen ansehen <span aria-hidden="true">→</span></a>
+                </article>
+
+                <article class="focus-card">
+                    <div class="focus-card-body">
+                        <span class="focus-card-badge infra">Infrastruktur</span>
+                        <h3>Homelab & Datensouveränität</h3>
+                        <p>Mein eigener 10″-Mini-Serverrack: ZimaOS, Docker, Nextcloud und sichere Cloudflare-Tunnels für vollständige Unabhängigkeit von großen Cloud-Anbietern.</p>
+                    </div>
+                    <a href="pages/homelab/" class="focus-card-link">Homelab-Setup erkunden <span aria-hidden="true">→</span></a>
+                </article>
+            </div>
+        </section>
+
+        <!-- GALERIE VORSCHAU -->
+        <section class="home-section" aria-labelledby="gallery-preview-title">
+            <div class="section-header">
+                <span class="section-tag">Portfolio-Auszug</span>
+                <h2 id="gallery-preview-title">Ausgewählte Impressionen</h2>
+                <p>Ein kleiner Einblick in meine fotografischen Arbeiten mit Vollformat-Sensor.</p>
+            </div>
+            <div class="preview-gallery-grid">
+                <div class="preview-photo-card">
+                    <img src="img/gallery/DSC03541_web.jpg" alt="Makroaufnahme einer violetten Allium-Blüte" loading="lazy" decoding="async">
+                    <div class="preview-photo-caption">Makro: Sphärische Allium-Blüte</div>
+                </div>
+                <div class="preview-photo-card">
+                    <img src="img/gallery/DSC03520_web.jpg" alt="Eleganter weißer Schwan auf klarem blauem Wasser" loading="lazy" decoding="async">
+                    <div class="preview-photo-caption">Eleganter Schwan auf der Donau</div>
+                </div>
+                <div class="preview-photo-card">
+                    <img src="img/gallery/64274376_web.jpg" alt="Geometrische Fassade eines modernen Glasgebäudes" loading="lazy" decoding="async">
+                    <div class="preview-photo-caption">Moderne Glasarchitektur & Linien</div>
+                </div>
+            </div>
+            <div class="gallery-action-wrapper">
+                <a href="pages/photos/" class="btn btn-primary">Alle 15 Aufnahmen in voller Auflösung ansehen →</a>
+            </div>
+        </section>
+
+        <!-- ABOUT TEASER -->
+        <section class="home-section" aria-labelledby="about-teaser-title">
+            <div class="home-about-teaser">
+                <div class="about-teaser-content">
+                    <span class="section-tag">Über mich</span>
+                    <h2 id="about-teaser-title">Technik als Handwerk begreifen</h2>
+                    <p>Ich mag es, die Dinge von Grund auf zu verstehen — vom physischen Server-Rack über den Linux-Kernel bis hin zum maßgeschneiderten CSS-Layout. Wenn du auf der Suche nach einem motivierten Partner für Web- und Fotoprojekte bist oder dich über Homelab-Architektur austauschen möchtest, lass uns gerne vernetzen!</p>
+                    <a href="pages/about/" class="btn btn-secondary">Mehr über meinen Werdegang erfahren →</a>
+                </div>
+                <div class="about-teaser-stats" aria-label="Wichtige Kennzahlen">
+                    <div class="stat-box">
+                        <span class="stat-number">3+</span>
+                        <span class="stat-label">Fachdisziplinen</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Self-Hosted Stack</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">15+</span>
+                        <span class="stat-label">Galerie-Werke</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">AT 🇦🇹</span>
+                        <span class="stat-label">Oberösterreich</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-footer-content">
+            <div class="footer-brand">
+                <a href="./" class="footer-logo">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                        <polygon points="50,8 86,29 86,71 50,92 14,71 14,29" fill="none" stroke-width="4.5" stroke-linejoin="round" />
+                        <path d="M 35,35 L 50,46 L 65,35 L 65,58 L 50,73 L 35,58 Z" fill="none" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <span>Hexcat</span>
+                </a>
+                <p>Noah Brückl-Mayr — Webdesign, Fotografie & Homelab</p>
+            </div>
+            <nav class="footer-nav" aria-label="Footer-Navigation">
+                <a href="pages/photos/">Fotografie</a>
+                <a href="pages/references/">Referenzen</a>
+                <a href="pages/homelab/">Homelab</a>
+                <a href="pages/about/">Über mich</a>
+            </nav>
+            <div class="footer-links">
+                <a href="https://www.instagram.com/prism_noah/" target="_blank" rel="noopener noreferrer">Instagram (@prism_noah)</a>
+                <a href="mailto:noah.c.bruecklmayr@gmail.com">E-Mail Kontakt</a>
             </div>
         </div>
-    </main>
+        <div class="footer-bottom">
+            <span>&copy; 2026 Noah Brückl-Mayr • Hexcat. Alle Rechte vorbehalten.</span>
+            <a href="#main-content">Nach oben springen ↑</a>
+        </div>
+    </footer>
 </body>
 </html>
